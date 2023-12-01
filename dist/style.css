@@ -675,6 +675,10 @@ video {
   clear: none;
 }
 
+.m-20 {
+  margin: 5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -799,8 +803,16 @@ video {
   height: 100vh;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .w-1\/3 {
   width: 33.333333%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .max-w-sm {
@@ -1791,6 +1803,11 @@ video {
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
 }
 
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
 .bg-teal-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
@@ -2083,6 +2100,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2539,21 +2561,19 @@ video {
   text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-amber-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(120 53 15 / var(--tw-bg-opacity));
-  }
+:is(.dark .dark\:bg-amber-900) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(120 53 15 / var(--tw-bg-opacity));
+}
 
-  .dark\:bg-gray-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  }
+:is(.dark .dark\:bg-slate-800) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
 
-  .dark\:bg-slate-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-  }
+:is(.dark .dark\:text-white) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -2600,55 +2620,40 @@ video {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(20 184 166 / var(--tw-ring-opacity));
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  @media (min-width: 768px) {
-    .dark\:md\:bg-slate-900 {
-      --tw-bg-opacity: 1;
-      background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-    }
-
-    .dark\:md\:bg-gray-800 {
-      --tw-bg-opacity: 1;
-      background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-    }
-
-    .dark\:md\:text-white {
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity));
-    }
-
-    .dark\:md\:ring {
-      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-    }
-
-    .dark\:md\:ring-slate-950 {
-      --tw-ring-opacity: 1;
-      --tw-ring-color: rgb(2 6 23 / var(--tw-ring-opacity));
-    }
-
-    .dark\:md\:ring-slate-900 {
-      --tw-ring-opacity: 1;
-      --tw-ring-color: rgb(15 23 42 / var(--tw-ring-opacity));
-    }
-
-    .dark\:md\:hover\:bg-gray-100:hover {
-      --tw-bg-opacity: 1;
-      background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-    }
-
-    .dark\:md\:hover\:text-black:hover {
-      --tw-text-opacity: 1;
-      color: rgb(0 0 0 / var(--tw-text-opacity));
-    }
+  :is(.dark .dark\:md\:bg-gray-800) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   }
 
-  @media (min-width: 1024px) {
-    .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
-      paint-order: markers;
-    }
+  :is(.dark .dark\:md\:bg-slate-900) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  }
+
+  :is(.dark .dark\:md\:text-white) {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  :is(.dark .dark\:md\:ring-slate-900) {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(15 23 42 / var(--tw-ring-opacity));
+  }
+
+  :is(.dark .dark\:md\:hover\:bg-gray-100:hover) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  }
+
+  :is(.dark .dark\:md\:hover\:text-black:hover) {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 1024px) {
+  :is(.dark .dark\:lg\:hover\:\[paint-order\:markers\]:hover) {
+    paint-order: markers;
   }
 }

@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark" id="mainHtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS</title>
     <link rel="stylesheet" href="./dist/style.css">
 </head>
-<body class="h-screen flex items-center justify-center bg-gray-900  md:bg-white dark:md:bg-slate-900">
+<body class="h-screen  bg-gray-900  md:bg-white dark:md:bg-slate-900">
 
-    <div class="max-w-sm mx-auto bg-gray-800 rounded-xl p-8 shadow-xl space-y-5 hover:bg-slate-600 cursor-pointer   md:flex md:space-x-5 md:items-center md:py-4 md:bg-teal-200 transform hover:scale-125 duration-500 dark:md:bg-gray-800">
+
+    <div class=" p-5 text-right">
+        <button id="dSwitchButton" class="text-slate-900 dark:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>
+          </button>
+    </div>
+
+    <div class="m-20 max-w-sm mx-auto bg-gray-800 rounded-xl p-8 shadow-xl space-y-5 hover:bg-slate-600 cursor-pointer   md:flex md:space-x-5 md:items-center md:py-4 md:bg-teal-200 transform hover:scale-125 duration-500 dark:md:bg-gray-800">
         <img class="h-24 mx-auto rounded-full ring-4 ring-red-500 md:ring-teal-500 shadow-2xl flex-shrink-0 transform hover:scale-110 duration-500 dark:md:ring-slate-900" src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.1803636316.1701129600&semt=sph" alt="">
 
         <div class="text-center space-y-3 md:text-left">
@@ -22,4 +31,10 @@
     </div>
 
 </body>
+
+
+<script src="./src/custom.js">
+
+</script>
+
 </html>
