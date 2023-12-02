@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* group utilities */
+
+.btn{
+    @apply 
+    px-3
+    py-1
+    rounded-md
+    ring-2
+    transition
+    hover:scale-110
+    duration-500
+    focus:ring-offset-1
+}
+
+
+
+.btnPurple{
+    @apply  bg-purple-950
+    hover:bg-purple-900
+    ring-purple-500
+    text-purple-500
+    focus:ring-lime-400
+    focus:text-lime-400
+}
+
+.btnGreen{
+    @apply  bg-green-950
+    hover:bg-green-900
+
+    ring-green-500
+    text-green-500
+    focus:ring-lime-400
+    focus:text-lime-400
+}
+
