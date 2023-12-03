@@ -1,23 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-/* group utilities */
+@layer components{
+    /* group utilities */
 
 .btn{
     @apply 
     px-3
     py-1
-    rounded-md
+    rounded-full
     ring-2
     transition
     hover:scale-110
     duration-500
-    focus:ring-offset-1
+    focus:ring-offset-1 
 }
-
-
 
 .btnPurple{
     @apply  bg-purple-950
@@ -31,10 +28,34 @@
 .btnGreen{
     @apply  bg-green-950
     hover:bg-green-900
-
     ring-green-500
     text-green-500
     focus:ring-lime-400
     focus:text-lime-400
 }
 
+}
+
+
+
+@layer base{
+    h1{
+        @apply text-2xl
+        text-red-500
+        font-semibold
+    }
+}
+
+@layer utilities{
+    .mazhar{
+        font-size: 30px;
+    }
+
+    .customFonts{
+        font-size: 18px;
+        color: rgb(7, 58, 58);
+        font-weight: bold;
+        font-style: italic;
+        text-transform: capitalize;
+    }
+}
